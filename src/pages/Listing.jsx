@@ -190,7 +190,7 @@ function Listing() {
         <div className="reviews">
           <p className="listingLocationTitle">Reviews</p>
           {listing.reviews.map((item) => {
-            if (item.userId == auth.currentUser.uid) {
+            if (item.userId == auth.currentUser?.uid) {
               return (
                 <ReviewItem
                   name={item.userName}
@@ -207,7 +207,7 @@ function Listing() {
             }
           })}
           {listing.reviews.map((item, index) => {
-            if (item.userId !== auth.currentUser.uid) {
+            if (item.userId !== auth.currentUser?.uid) {
               return (
                 <ReviewItem
                   key={index}
